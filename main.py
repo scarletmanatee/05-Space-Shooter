@@ -27,7 +27,7 @@ class Bullet(arcade.Sprite):
             velocity: (dx, dy) tuple
             damage: int (or float)
         '''
-        super().__init__("assets/bullet.png", 0.5)
+        super().__init__("assets/potion.png", 0.5)
         (self.center_x, self.center_y) = position
         (self.dx, self.dy) = velocity
         self.damage = damage
@@ -41,7 +41,7 @@ class Bullet(arcade.Sprite):
 
 class Player(arcade.Sprite):
     def __init__(self):
-        super().__init__("assets/narwhal.png", 0.5)
+        super().__init__("assets/Wizard.png", 0.5)
         (self.center_x, self.center_y) = STARTING_LOCATION
 
 class Enemy(arcade.Sprite):
@@ -50,7 +50,7 @@ class Enemy(arcade.Sprite):
         initializes a penguin enemy
         Parameter: position: (x,y) tuple
         '''
-        super().__init__("assets/penguin.png", 0.5)
+        super().__init__("assets/eyeball.png", 0.5)
         self.hp = ENEMY_HP
         (self.center_x, self.center_y) = position
 
@@ -65,7 +65,11 @@ class Window(arcade.Window):
         # So we just see our object, not the pointer.
         self.set_mouse_visible(False)
 
-        arcade.set_background_color(open_color.black)
+        arcade.set_background_color(open_color.orange_9)
+        self.bullet_list = arcade.SpriteList()
+        self.enemy_list = arcade.SpriteList()
+        self.player = Player()
+        self.score = 0
 
 
 
