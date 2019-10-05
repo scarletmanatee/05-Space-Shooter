@@ -10,8 +10,49 @@ logger = logging.getLogger(__name__)
 
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
-SCREEN_TITLE = ""
+MARGIN = 30
+SCREEN_TITLE = "Spooker Shooter"
 
+STARTING_LOCATION = (400,100)
+BULLET_DAMAGE = 10
+ENEMY_HP = 100
+HIT_SCORE = 10
+KILL_SCORE = 100
+
+class Bullet(arcade.Sprite):
+    def __init__(self, position, velocity, damage):
+        ''' 
+        initializes the bullet
+        Parameters: position: (x,y) tuple
+            velocity: (dx, dy) tuple
+            damage: int (or float)
+        '''
+        super().__init__("assets/bullet.png", 0.5)
+        (self.center_x, self.center_y) = position
+        (self.dx, self.dy) = velocity
+        self.damage = damage
+
+    def update(self):
+        '''
+        Moves the bullet
+        '''
+        self.center_x += self.dx
+        self.center_y += self.dy
+
+class Player(arcade.Sprite):
+    def __init__(self):
+        super().__init__("assets/narwhal.png", 0.5)
+        (self.center_x, self.center_y) = STARTING_LOCATION
+
+class Enemy(arcade.Sprite):
+    def __init__(self, position):
+        '''
+        initializes a penguin enemy
+        Parameter: position: (x,y) tuple
+        '''
+        super().__init__("assets/penguin.png", 0.5)
+        self.hp = ENEMY_HP
+        (self.center_x, self.center_y) = position
 
 class Window(arcade.Window):
 
