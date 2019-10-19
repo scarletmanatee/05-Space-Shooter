@@ -1,0 +1,41 @@
+Name: Dustin Adkins
+Date: 10/18/19
+Project: Space Shooter
+Peer's repository: scarletmanatee, not sure of actual name
+
+
+
+What is something you learned by reviewing your peer's project?
+How to use checkforcollisionwithlist properly. I never seem to implement it properly since it hits 
+every tick, but he/she seemed to figure it out. 
+ 
+
+What is something you saw in your peer's project that you would like to apply to your own programming projects?
+I almost never use the mouse when I code games, so maybe I could give that a try. Also I saw d.damage when calculating
+the damage, which reminded me that I am able to give different enemies different damage.
+ 
+
+What suggestions would you have for your peer to improve his/her code?
+Probably some more comments that explain code. I don't think I saw any comments from the user, only from the template.
+ 
+
+What could have been clearer or better commented?
+Any of the user-created code that was not given in the template could use comments explaining it.
+ 
+
+Was there anything in the code that was confusing to you? If so, what?
+No.
+ 
+
+Does the repository contain an appropriate LICENSE?
+Yes.
+ 
+
+What is something he/she could add to the README.md to make it more descriptive?
+It looks like it is still from the initial commit, so it could describe it as a game
+instead of introducing the assignment.
+ 
+
+Pay a compliment to your peer based on the quality of his/her code.
+It was very clean and concise.
+
